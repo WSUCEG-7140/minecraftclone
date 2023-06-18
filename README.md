@@ -5,5 +5,5 @@ W     :  Forwards
 S     :  Back
 A     :  Left
 D     :  Right
-SPACE :  Jump
-F     :  Toggle between fly/not fly.
+SPACE :  Jump Up
+F     :  Down
