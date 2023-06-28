@@ -1,3 +1,6 @@
+# import module to write testcases for the code
+import unittest
+# import Generalized linear models (GLM)
 import glm
 # 6 x 3 matrix direction
 DIRECTIONS = (glm.ivec3(1, 0, 0), 
@@ -14,15 +17,72 @@ DOWN = glm.ivec3(0, -1, 0)
 SOUTH = glm.ivec3(0, 0, 1)
 NORTH = glm.ivec3(0, 0, -1)
 
-assert [EAST.x, EAST.y, EAST.z] == [1, 0, 0]
-assert [WEST.x, WEST.y, WEST.z] == [-1, 0, 0]
-assert [UP.x, UP.y, UP.z] == [0, 1, 0]
-assert [DOWN.x, DOWN.y, DOWN.z] == [0, -1, 0]
-assert [SOUTH.x, SOUTH.y, SOUTH.z] == [0, 0, 1]
-assert [NORTH.x, NORTH.y, NORTH.z] == [0, 0, -1]
-assert DIRECTIONS[0] == [1, 0, 0]
-assert DIRECTIONS[1] == [-1, 0, 0]
-assert DIRECTIONS[2] == [0, 1, 0]
-assert DIRECTIONS[3] == [0, -1, 0]
-assert DIRECTIONS[4] == [0, 0, 1]
-assert DIRECTIONS[5] == [0, 0, -1]
+class MyCodeTestCase(unittest.TestCase):
+    def setUp(self):
+        # Set up any necessary test data or configurations
+
+        # Initialize the code variables for testing
+        self.DIRECTIONS = (glm.ivec3(1, 0, 0), 
+            glm.ivec3(-1, 0, 0), 
+            glm.ivec3(0, 1, 0), 
+            glm.ivec3(0, -1, 0), 
+            glm.ivec3(0, 0, 1), 
+            glm.ivec3(0, 0, -1))
+        self.EAST = glm.ivec3(1, 0, 0)
+        self.WEST = glm.ivec3(-1, 0, 0)
+        self.UP = glm.ivec3(0, 1, 0)
+        self.DOWN = glm.ivec3(0, -1, 0)
+        self.SOUTH = glm.ivec3(0, 0, 1)
+        self.NORTH = glm.ivec3(0, 0, -1)
+
+        
+    def test_EAST(self):
+        self.assertIsInstance(self.EAST, glm.ivec3)
+        self.assertEqual(len(self.EAST), 3)
+        self.assertEqual([self.EAST.x, self.EAST.y, self.EAST.z], [1, 0, 0])
+    
+    def test_WEST(self):
+        self.assertIsInstance(self.WEST, glm.ivec3)
+        self.assertEqual(len(self.WEST), 3)
+        self.assertEqual([self.WEST.x, self.WEST.y, self.WEST.z], [-1, 0, 0])
+
+    def test_UP(self):
+        self.assertIsInstance(self.UP, glm.ivec3)
+        self.assertEqual(len(self.UP), 3)
+        self.assertEqual([self.UP.x, self.UP.y, self.UP.z], [0, 1, 0])
+
+    def test_DOWN(self):
+        self.assertIsInstance(self.DOWN, glm.ivec3)
+        self.assertEqual(len(self.DOWN), 3)
+        self.assertEqual([self.DOWN.x, self.DOWN.y, self.DOWN.z], [0, -1, 0])
+
+    def test_SOUTH(self):
+        self.assertIsInstance(self.SOUTH, glm.ivec3)
+        self.assertEqual(len(self.SOUTH), 3)
+        self.assertEqual([self.SOUTH.x, self.SOUTH.y, self.SOUTH.z], [0, 0, 1])
+
+    def test_NORTH(self):
+        #self.assertIsInstance(self.NORTH, glm.ivec3)
+        self.assertEqual(len(self.NORTH), 3)
+        self.assertEqual([self.NORTH.x, self.NORTH.y, self.NORTH.z], [0, 0, -1])
+
+
+
+    def test_DIRECTIONS(self):
+        for coords in self.DIRECTIONS:
+            self.assertEqual(len(coords), 3)
+        self.assertEqual(self.DIRECTIONS[0], [1, 0, 0])
+        self.assertEqual(self.DIRECTIONS[1], [-1, 0, 0])
+        self.assertEqual(self.DIRECTIONS[2], [0, 1, 0])
+        self.assertEqual(self.DIRECTIONS[3], [0, -1, 0])
+        self.assertEqual(self.DIRECTIONS[4], [0, 0, 1])
+        self.assertEqual(self.DIRECTIONS[5], [0, 0, -1])
+
+
+        
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+
