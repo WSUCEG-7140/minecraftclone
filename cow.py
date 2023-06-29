@@ -1,3 +1,4 @@
+import unittest
 transparent = True  # Indicates whether the cow model is transparent
 
 transparency = 2  # The transparency level of the cow model
@@ -40,3 +41,44 @@ shading_values = [
     [0.8, 0.8, 0.8, 0.8],  # Shading values for the front face
     [0.8, 0.8, 0.8, 0.8],  # Shading values for the back face
 ] 
+
+class minecraftCowTestCases(unittest.TestCase):
+    def test_cow_properties(self):
+        # Test transparency property
+        assert transparent is True
+
+        # Test transparency value
+        assert transparency == 2
+
+        # Test is_cube property
+        assert is_cube is False
+
+        # Test glass property
+        assert glass is False
+
+        # Test translucent property
+        assert translucent is False
+
+    def test_cow_data_structures(self):
+        # Test colliders list
+        assert len(colliders) == 1
+        assert len(colliders[0]) == 2
+        assert colliders[0][0] == (-0.4375, -0.5, -0.4375)
+        assert colliders[0][1] == (0.4375, 0.5, 0.4375)
+
+        # Test vertex_positions list
+        assert len(vertex_positions) == 6
+        assert len(vertex_positions[0]) == 12
+
+        # Test tex_coords list
+        assert len(tex_coords) == 6
+        assert len(tex_coords[0]) == 12
+
+        # Test shading_values list
+        assert len(shading_values) == 6
+        assert len(shading_values[0]) == 4
+
+# Run the test cases
+if __name__ == '__main__':
+    unittest.main()
+
