@@ -1,6 +1,6 @@
 # import module to write testcases for the code
 import unittest
-# import Generalized linear models (GLM)
+# import The OpenGL interface
 import glm
 # 6 x 3 matrix direction
 DIRECTIONS = (glm.ivec3(1, 0, 0), 
