@@ -39,7 +39,7 @@ shading_values = [
 	[0.8, 0.8, 0.8, 0.8],
 	[0.8, 0.8, 0.8, 0.8],
 ]
-
+# Class Unittest
 class MyCodeTestCase(unittest.TestCase):
     def setUp(self):
         # Set up any necessary test data or configurations
@@ -85,35 +85,35 @@ class MyCodeTestCase(unittest.TestCase):
             [0.8, 0.8, 0.8, 0.8],
             [0.8, 0.8, 0.8, 0.8],
         ]
-
+    # test transparent variable
     def test_transparent(self):
         self.assertFalse(self.transparent)
-
+    # test transparency variable
     def test_transparency(self):
         self.assertEqual(self.transparency, 0)
-
+    # test is_cube variable
     def test_is_cube(self):
         self.assertTrue(self.is_cube)
-
+    # test glass variable
     def test_glass(self):
         self.assertFalse(self.glass)
-
+    # test translucent variable
     def test_translucent(self):
         self.assertFalse(self.translucent)
-
+    # test colliders variable
     def test_colliders(self):
         self.assertIsInstance(self.colliders, list)
-
+    # test vertices positions variable
     def test_vertex_positions(self):
         for positions in self.vertex_positions:
             self.assertIsInstance(positions, list)
             self.assertEqual(len(positions), 12)
-
+    # test texture coordinates variable
     def test_tex_coords(self):
         for coords in self.tex_coords:
             self.assertIsInstance(coords, list)
             self.assertEqual(len(coords), 12)
-
+    # test shading_values variable
     def test_shading_values(self):
         for values in self.shading_values:
             self.assertIsInstance(values, list)

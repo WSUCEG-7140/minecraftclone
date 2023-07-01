@@ -1,37 +1,34 @@
-#import module to write testcases for the code
+# import module to write testcases for the code
 import unittest
-
-# variables declarations
+# variable declarations
 transparent = True
 transparency = 2
 is_cube = False
 glass = False
 translucent = False
 
-colliders = []
-
-# vertex points
+colliders = [
+	[
+		(-0.5, -0.5000, -0.5),
+		( 0.5, -0.4375,  0.5)
+	]
+]
+# vertices positions
 vertex_positions = [
-	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
-	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
-	[ 0.3536, 0.5000, -0.3536,  0.3536, -0.5000, -0.3536, -0.3536, -0.5000,  0.3536, -0.3536, 0.5000,  0.3536],
-	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
+	[ 0.5, -0.4375,  0.5,   0.5, -0.4375, -0.5,  -0.5, -0.4375, -0.5,  -0.5, -0.4375,  0.5], # top
+	[-0.5, -0.4375,  0.5,  -0.5, -0.4375, -0.5,   0.5, -0.4375, -0.5,   0.5, -0.4375,  0.5], # bottom
 ]
-# texture coordinates
+# textures coordinates
 tex_coords = [
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
+	[0.0, 1.0, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 1.0, 0.0],
+	[0.0, 1.0, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 1.0, 0.0],
 ]
-
 # shading values
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
-	[1.0, 1.0, 1.0, 1.0],
-	[1.0, 1.0, 1.0, 1.0],
-	[1.0, 1.0, 1.0, 1.0],
+	[0.4, 0.4, 0.4, 0.4],
 ]
+
 
 
 # Class Unittest
@@ -45,31 +42,28 @@ class MyCodeTestCase(unittest.TestCase):
         self.is_cube = False
         self.glass = False
         self.translucent = False
-
-        self.colliders = []
-
+        self.colliders = [
+	[
+		(-0.5, -0.5000, -0.5),
+		( 0.5, -0.4375,  0.5)
+	]
+]
+        # initialize vertices variable for testing
         self.vertex_positions = [
-	       [-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
-	       [-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
-	       [ 0.3536, 0.5000, -0.3536,  0.3536, -0.5000, -0.3536, -0.3536, -0.5000,  0.3536, -0.3536, 0.5000,  0.3536],
-	       [ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
-        ]
-
+	[ 0.5, -0.4375,  0.5,   0.5, -0.4375, -0.5,  -0.5, -0.4375, -0.5,  -0.5, -0.4375,  0.5], # top
+	[-0.5, -0.4375,  0.5,  -0.5, -0.4375, -0.5,   0.5, -0.4375, -0.5,   0.5, -0.4375,  0.5], # bottom
+]        
+        # initialize texture coordinates variable for testing
         self.tex_coords = [
-	       [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	       [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	       [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	       [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-        ]
-
-        self.shading_values = [
-	       [1.0, 1.0, 1.0, 1.0],
-	       [1.0, 1.0, 1.0, 1.0],
-	       [1.0, 1.0, 1.0, 1.0],
-	       [1.0, 1.0, 1.0, 1.0],
-        ]
-
-
+	[0.0, 1.0, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 1.0, 0.0],
+	[0.0, 1.0, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 1.0, 0.0],
+]
+        # initialize shading_values variable for testing
+        self.shading_values =  [
+	[1.0, 1.0, 1.0, 1.0],
+	[0.4, 0.4, 0.4, 0.4],
+]
+ 
     # test transparent variable
     def test_transparent(self):
         self.assertTrue(self.transparent)
@@ -98,7 +92,7 @@ class MyCodeTestCase(unittest.TestCase):
         for coords in self.tex_coords:
             self.assertIsInstance(coords, list)
             self.assertEqual(len(coords), 12)
-    # test shading values variable
+    # test shading variable
     def test_shading_values(self):
         for values in self.shading_values:
             self.assertIsInstance(values, list)
@@ -107,4 +101,6 @@ class MyCodeTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
 
