@@ -107,3 +107,73 @@ class Save:
             if chunk.modified:
                 self.save_chunk(chunk_position)
                 chunk.modified = False
+#test cases 
+class TestSave(unittest.TestCase):
+    def setUp(self):
+        self.world = World()  # Assuming World class is defined elsewhere
+        
+        # Initialize the Save instance with a mock world and path
+        self.save = Save(self.world, "save")
+
+    def test_chunk_position_to_path(self):
+        chunk_position = (10, 0, 5)
+        expected_path = "save/a.b/c.c.dat"
+
+        path = self.save.chunk_position_to_path(chunk_position)
+        self.assertEqual(path, expected_path)
+
+    def test_load_chunk_existing_file(self):
+        chunk_position = (10, 0, 5)
+        chunk_path = "save/a.b/c.c.dat"
+        chunk_data = nbt.File({"Level": {"Blocks": [1, 2, 3]}})
+        expected_chunk = Chunk(self.world, glm.ivec3(chunk_position))
+
+        with patch("nbtlib.load", return_value=chunk_data):
+            self.save.load_chunk(chunk_position)
+        
+        self.assertEqual(self.world.chunks[glm.ivec3(chunk_position)], expected_chunk)
+
+    def test_load_chunk_non_existing_file(self):
+        chunk_position = (20, 0, 15)
+        chunk_path = "save/d.e/f.f.dat"
+
+        with patch("nbtlib.load", side_effect=FileNotFoundError):
+            self.save.load_chunk(chunk_position)
+
+        # Ensure no chunk is loaded
+        self.assertNotIn(glm.ivec3(chunk_position), self.world.chunks)
+
+    def test_save_chunk_existing_file(self):
+        chunk_position = (10, 0, 5)
+        chunk_path = "save/a.b/c.c.dat"
+        chunk_data = nbt.File({"Level": {"Blocks": [4, 5, 6]}})
+
+        with patch("nbtlib.load", return_value=chunk_data):
+            with patch("nbtlib.save") as mock_save:
+                self.save.save_chunk(chunk_position)
+
+        mock_save.assert_called_once_with(chunk_path, gzipped=True)
+        self.assertFalse(self.world.chunks[glm.ivec3(chunk_position)].modified)
+
+    def test_save_chunk_non_existing_file(self):
+        chunk_position = (20, 0, 15)
+        chunk_path = "save/d.e/f.f.dat"
+        chunk_data = nbt.File({"Level": {}})
+
+        with patch("nbtlib.load", side_effect=FileNotFoundError):
+            with patch("nbtlib.save") as mock_save:
+                self.save.save_chunk(chunk_position)
+
+        mock_save.assert_called_once_with(chunk_path, gzipped=True)
+        self.assertFalse(self.world.chunks[glm.ivec3(chunk_position)].modified)
+
+    def test_load(self):
+        # Test case for load() method
+        pass
+
+    def test_save(self):
+        # Test case for save() method
+        pass
+
+if __name__ == "__main__":
+    unittest.main()
