@@ -21,13 +21,14 @@ class MyCodeTestCase(unittest.TestCase):
     def setUp(self):
         # Set up any necessary test data or configurations
 
-        # Initialize the variables from OpenGL interface for testing
+        # Initialize the DIRECTIONS matrix from OpenGL interface for testing
         self.DIRECTIONS = (glm.ivec3(1, 0, 0), 
             glm.ivec3(-1, 0, 0), 
             glm.ivec3(0, 1, 0), 
             glm.ivec3(0, -1, 0), 
             glm.ivec3(0, 0, 1), 
             glm.ivec3(0, 0, -1))
+        # Initialize the individual directions variables from OpenGL interface for testing
         self.EAST = glm.ivec3(1, 0, 0)
         self.WEST = glm.ivec3(-1, 0, 0)
         self.UP = glm.ivec3(0, 1, 0)
