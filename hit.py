@@ -101,3 +101,64 @@ class Hit_ray:
 			if x >= -0.5 and x <= 0.5 and y >= -0.5 and y <= 0.5:
 				distance = math.sqrt((x - lx) ** 2 + (y - ly) ** 2 + (z - lz) ** 2)
 				return self.check(hit_callback, distance, (bx, by, bz), (bx, by, bz + sign[2]))
+#test cases				
+class TestHitRay(unittest.TestCase):
+    def setUp(self):
+        self.world = World()  # Assuming World class is defined elsewhere
+        self.rotation = (0.0, 0.0, 0.0)  # Set the rotation angles
+        self.starting_position = (0.0, 0.0, 0.0)  # Set the starting position
+        self.hit_ray = Hit_ray(self.world, self.rotation, self.starting_position)
+
+    def test_check_hit_block(self):
+        def hit_callback(current_block, next_block):
+            pass  # Implement your hit_callback logic here
+        
+        distance = 1.0
+        current_block = (0, 0, 0)
+        next_block = (1, 0, 0)
+
+        # Set the block number to a non-zero value to simulate a hit
+        self.world.set_block_number(next_block, 1)
+
+        result = self.hit_ray.check(hit_callback, distance, current_block, next_block)
+
+        self.assertTrue(result)  # A hit occurred
+        # Add additional assertions based on your hit_callback logic
+
+    def test_check_no_hit_block(self):
+        def hit_callback(current_block, next_block):
+            pass  # Implement your hit_callback logic here
+
+        distance = 1.0
+        current_block = (0, 0, 0)
+        next_block = (1, 0, 0)
+
+        # Set the block number to 0 to simulate no hit
+        self.world.set_block_number(next_block, 0)
+
+        result = self.hit_ray.check(hit_callback, distance, current_block, next_block)
+
+        self.assertFalse(result)  # No hit occurred
+        # Add additional assertions based on your hit_callback logic
+
+    def test_step_hit(self):
+        def hit_callback(current_block, next_block):
+            pass  # Implement your hit_callback logic here
+
+        with patch("math.sqrt", return_value=1.0):
+            result = self.hit_ray.step(hit_callback)
+
+        self.assertTrue(result)  # A hit occurred
+        # Add additional assertions based on your hit_callback logic
+
+    def test_step_no_hit(self):
+        def hit_callback(current_block, next_block):
+            pass  # Implement your hit_callback logic here
+
+        result = self.hit_ray.step(hit_callback)
+
+        self.assertFalse(result)  # No hit occurred
+        # Add additional assertions based on your hit_callback logic
+
+if __name__ == "__main__":
+    unittest.main()
