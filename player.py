@@ -3,7 +3,7 @@ import entity
 import glm
 import options
 import chunk
-from enum import IntEnum
+from enum import IntEnu
 import collider
 
 WALKING_SPEED = 4.317
