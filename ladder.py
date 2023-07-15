@@ -1,5 +1,5 @@
 # This module implements issue#50 assigned to kruslin2 and passed unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#48.
+# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#50.
 # It declares all geometric variables needed to create ladders in 3D terrain.
 
 
