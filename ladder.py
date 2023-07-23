@@ -1,21 +1,39 @@
+# This module implements issue#50 assigned to kruslin2 and passed unittest with 100% coverage
+# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#50.
+# It declares all geometric variables needed to create ladders in 3D terrain.
+
+
 # import module to write testcases for the code
 import unittest
-# variables declarations
+# variable initializations
+
+# It is transparent
 transparent = True
+
+# Degree of transparency
 transparency = 2
-translucent = False
+
+# It is not a cube shape
 is_cube = False
+
+# It is not glass
 glass = False
 
+# It is not tranlucent
+translucent = False
+
+# It has no colliders
 colliders = []
-# vertices positions
+
+
+# vertices positions initialization, to make a ladder
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000, -0.3536,  0.3536, -0.5000, -0.3536, -0.3536, -0.5000,  0.3536, -0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
-# textures coordinates
+# textures coordinates initialization, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
@@ -23,13 +41,14 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values
+# shading values initialization, the shading intensities
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
 ]
+
 # Class Unittest
 class MyCodeTestCase(unittest.TestCase):
     def setUp(self):
@@ -42,7 +61,7 @@ class MyCodeTestCase(unittest.TestCase):
         self.glass = False
         self.translucent = False
         self.colliders = []
-        # Initialize vertices position variables for testing 
+
         self.vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
@@ -50,51 +69,57 @@ class MyCodeTestCase(unittest.TestCase):
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
       
-        # Initialize texture coordinates variables for testing
         self.tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
-        # Initialize shading values variables for testing
+
         self.shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
 ]
-
-
-    # test transparent variable
+ 
+    # Test transparent variable
     def test_transparent(self):
         self.assertTrue(self.transparent)
-    # test transparency variable
+
+    # Test transparency variable
     def test_transparency(self):
         self.assertEqual(self.transparency, 2)
-    # test is_cube variable
+
+    # Test is_cube variable
     def test_is_cube(self):
         self.assertFalse(self.is_cube)
-    # test glass variable
+
+    # Test glass variable
     def test_glass(self):
         self.assertFalse(self.glass)
-    # test translucent variable
+
+    # Test translucent variable
     def test_translucent(self):
         self.assertFalse(self.translucent)
-    # test colliders variable
+
+    # Test colliders variable
     def test_colliders(self):
         self.assertIsInstance(self.colliders, list)
-    # test vertex_positions variable
+
+    # Test vertex_position variable
     def test_vertex_positions(self):
         for positions in self.vertex_positions:
             self.assertIsInstance(positions, list)
             self.assertEqual(len(positions), 12)
-    # test tex_coords
+
+    # Test tex_coords variable
     def test_tex_coords(self):
         for coords in self.tex_coords:
             self.assertIsInstance(coords, list)
             self.assertEqual(len(coords), 12)
-    # test shading_values
+
+    # Test shading_values
     def test_shading_values(self):
         for values in self.shading_values:
             self.assertIsInstance(values, list)
@@ -103,37 +128,6 @@ class MyCodeTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
