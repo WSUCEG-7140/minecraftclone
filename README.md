@@ -3,9 +3,9 @@
 Members : WSUCEG7140 Erik M. Buck, bibekrj, Deekshitha-kancharla, cleancoder1016, kruslin2.</br></br>
 <h2>Documentation</h2>
 <ul>
-  <li>cleancoder1016</li>
-  <li>Deekshitha-kancharla</li>
-  <li>kruslin2</li>
+  <li>cleancoder1016 - </li>
+  <li>Deekshitha-kancharla - </li>
+  <li>kruslin2 - </li>
 </ul>  
 
 
