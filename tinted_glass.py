@@ -1,6 +1,10 @@
-# This module implements issue#67 assigned to kruslin2 and passed automated unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#67. 
-# It declares all geometric variables needed to create tinted glasses in 3D terrain.
+"""
+| This module implements issue#67 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#67. 
+| It declares all geometric variables needed to create tinted glasses in 3D block models for terrain.
+
+https://minecraft.fandom.com/wiki/Tinted_Glass
+"""
 
 # import module to write testcases for the code
 import unittest
