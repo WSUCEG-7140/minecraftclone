@@ -1,8 +1,11 @@
-# This module implements issue#66 assigned to kruslin2 and passed automated unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#66.
-# It declares all geometric variables needed to create levers in 3D terrain.
-"""https://minecraft.fandom.com/wiki/Lever
 """
+  | This module implements issue#66 assigned to kruslin2 and passed automated unittest with 100% coverage
+  | The coverage report in pdf format is attached to the GitHub link pull request associated with issue#66.
+  | It declares all geometric variables needed to create levers in 3D block models for terrain.
+
+   https://minecraft.fandom.com/wiki/Lever
+"""
+
 # import module to write testcases for the code
 import unittest
 # Constant variables initializations
