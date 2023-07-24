@@ -1,11 +1,15 @@
-# This module implements issue#50 assigned to kruslin2 and passed unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#50.
-# It declares all geometric variables needed to create ladders in 3D terrain.
+"""
+| This module implements issue#50 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#50.
+| It declares all geometric variables needed to create ladders in 3D block models for terrain.
+
+https://minecraft.fandom.com/wiki/Ladder
+"""
 
 
 # import module to write testcases for the code
 import unittest
-# variable initializations
+# constant variable initializations
 
 # It is transparent
 transparent = True

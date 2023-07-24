@@ -1,23 +1,43 @@
+"""
+| This module implements issue#15 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#15.
+| It declares all geometric variables needed to create fires in 3D block models for terrain.
+
+https://wiki.sportskeeda.com/minecraft/fire-in-minecraft
+"""
+
 #import module to write testcases for the code
 import unittest
 
-# variables declarations
+# constant variables initialization
+
+# It is transparent
 transparent = True
+
+# Degree of transparency
 transparency = 2
+
+# It is not cube
 is_cube = False
+
+# It is not glass
 glass = False
+
+# It is not translucent
 translucent = False
 
+# It has no colliders values
 colliders = []
 
-# vertex points
+# vertices positions initialization, to make fires
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000, -0.3536,  0.3536, -0.5000, -0.3536, -0.3536, -0.5000,  0.3536, -0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
-# texture coordinates
+
+# textures coordinates initialization, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
@@ -25,7 +45,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values
+# shading values initialization for the shading intensities
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],

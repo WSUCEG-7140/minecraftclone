@@ -1,6 +1,10 @@
-# This module implements issue#48 assigned to kruslin2 and passed unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#48
-# It declares all geometric variables needed to create a torch in terrain in 3D.
+"""
+| This module implements issue#48 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#48
+| It declares all geometric variables needed to create a torch in 3d block models for terrain.
+
+https://minecraft.fandom.com/wiki/Torch
+"""
 
 # import module to write test cases for the code
 import unittest

@@ -1,21 +1,30 @@
+"""
+| This module implements issue#15 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#15.
+| It declares all geometric constant variables for plane orientations needed to create 3D block models for terrain
+"""
+
 # import module to write testcases for the code
 import unittest
 # import The OpenGL interface
 import glm
-# 6 x 3 matrix direction
+
+# 6 x 3 matrix direction in plane orientation initialization
 DIRECTIONS = (glm.ivec3(1, 0, 0), 
             glm.ivec3(-1, 0, 0), 
             glm.ivec3(0, 1, 0), 
             glm.ivec3(0, -1, 0), 
             glm.ivec3(0, 0, 1), 
             glm.ivec3(0, 0, -1))
-# direction vectors declarations
+
+# direction vectors in plane orientation initialization
 EAST = glm.ivec3(1, 0, 0)
 WEST = glm.ivec3(-1, 0, 0)
 UP = glm.ivec3(0, 1, 0)
 DOWN = glm.ivec3(0, -1, 0)
 SOUTH = glm.ivec3(0, 0, 1)
 NORTH = glm.ivec3(0, 0, -1)
+
 # Class Unittest
 class MyCodeTestCase(unittest.TestCase):
     def setUp(self):

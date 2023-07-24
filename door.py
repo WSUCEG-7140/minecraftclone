@@ -1,16 +1,33 @@
+"""
+ | This module implements issue#15 assigned to kruslin2 and passed automated unittest with 100% coverage
+ | The coverage report in pdf format is attached to the GitHub link pull request associated with issue#15.
+ | It declares all geometric variables needed to create doors in 3D block models for terrain.
+"""
+
 #import module to write testcases for the code
 import unittest
 
-# variables declarations
+# variables initialization
+
+# Door is not transparent
 transparent = False
+
+# Degree of tranparency
 transparency = 0
+
+# Door is cube
 is_cube = True
+
+# Door is not glass
 glass = False
+
+# Door is not translucent
 translucent = False
 
+# It has no colliders values
 colliders = []
 
-# vertices positions
+# vertices positions initialization, to make doors
 vertex_positions = [
 	[ 0.5,  0.5,  0.5,  0.5, -0.5,  0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5], # right
 	[-0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,  0.5,  0.5], # left
@@ -20,7 +37,8 @@ vertex_positions = [
 	[ 0.5,  0.5, -0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5], # back
 ]
 
-# texture coordinates
+
+# textures coordinates initialization, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
@@ -30,7 +48,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values
+# shading values initialization, the shading intensities
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6],
 	[0.6, 0.6, 0.6, 0.6],
