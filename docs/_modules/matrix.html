@@ -82,12 +82,10 @@
            <div itemprop="articleBody">
              
   <h1>Source code for matrix</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">| This module implements issue#64 assigned to kruslin2 and passed automated unittest with 100% coverage</span>
-<span class="sd">| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#64.</span>
-<span class="sd">| This module declares a class Matris capable of various matrix operations for geometric coordinates</span>
+<span></span><span class="c1"># This module implements issue#64 assigned to kruslin2 and passed unittest with 100% coverage</span>
+<span class="c1"># The coverage report in pdf format is attached to the GitHub link pull request associated with issue#64.</span>
+<span class="c1"># This module provides all matrix operations to be used by other modules</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1">#import module to write testcases for the code</span>
 <span class="kn">import</span> <span class="nn">unittest</span>
@@ -143,7 +141,7 @@
 
 	<span class="k">return</span> <span class="n">result_matrix</span></div>
 
-<span class="c1"># Class matrix for various matrix operations methods</span>
+<span class="c1"># Class matrix for various matrix operations</span>
 <div class="viewcode-block" id="Matrix"><a class="viewcode-back" href="../docs/matrix.html#matrix.Matrix">[docs]</a><span class="k">class</span> <span class="nc">Matrix</span><span class="p">:</span>
         <span class="c1"># Class object initialization</span>
 	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
@@ -213,7 +211,7 @@
 <span class="sd">		:param type: integer</span>
 <span class="sd">		:return: none</span>
 <span class="sd">		&quot;&quot;&quot;</span>
-                <span class="c1"># distance to origin (0, 0, 0)</span>
+
 		<span class="n">magnitude</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span><span class="p">)</span>
 		
 		<span class="n">x</span> <span class="o">/=</span> <span class="o">-</span><span class="n">magnitude</span>
@@ -236,7 +234,6 @@
 		<span class="n">ys</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="n">sin_angle</span>
 		<span class="n">zs</span> <span class="o">=</span> <span class="n">z</span> <span class="o">*</span> <span class="n">sin_angle</span>
 		
-                <span class="c1"># rotation operation</span>
 		<span class="n">rotation_matrix</span> <span class="o">=</span> <span class="n">copy_matrix</span><span class="p">(</span><span class="n">clean_matrix</span><span class="p">)</span>
 		
 		<span class="n">rotation_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">one_minus_cos</span> <span class="o">*</span> <span class="n">xx</span><span class="p">)</span> <span class="o">+</span> <span class="n">cos_angle</span>
@@ -279,7 +276,7 @@
 <span class="sd">		:param type: integer</span>
 <span class="sd">		:return: none</span>
 <span class="sd">		&quot;&quot;&quot;</span>
-                <span class="c1"># create size of frustum</span>
+
 		<span class="n">deltax</span> <span class="o">=</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span>
 		<span class="n">deltay</span> <span class="o">=</span> <span class="n">top</span> <span class="o">-</span> <span class="n">bottom</span>
 		<span class="n">deltaz</span> <span class="o">=</span> <span class="n">far</span> <span class="o">-</span> <span class="n">near</span>
