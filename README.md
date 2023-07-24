@@ -5,7 +5,7 @@ Members : WSUCEG7140 Erik M. Buck, bibekrj, Deekshitha-kancharla, cleancoder1016
 <ul>
   <li>cleancoder1016 - </li>
   <li>Deekshitha-kancharla - </li>
-  <li>kruslin2 - doc_implementing issue#98</li>
+  <li>kruslin2 - <a href=" ">Visit W3Schools.com!</a>doc_implementing issue#98</li>
 </ul>  
 
 
