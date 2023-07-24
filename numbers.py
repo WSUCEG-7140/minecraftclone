@@ -1,9 +1,15 @@
+"""
+| This module implements issue#21 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#21.
+| It declares all geometric variables needed to create 3D blokc models terrain.
+"""
+
 # import module to write testcases for the code
 import unittest
 
-# variables declarations
+# constant variables initializations
 
-# Vertices positions
+# vertices positions initialization, to create terrain
 vertex_positions = [
 	 0.5,  0.5,  0.5,  0.5, -0.5,  0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5,
 	-0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,  0.5,  0.5,
@@ -13,7 +19,7 @@ vertex_positions = [
 	 0.5,  0.5, -0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,
 ]
 
-# Texture coordinates
+# textures coordinates initialization, where textures drawn pixel by pixel
 tex_coords = [
 	0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0,
 	0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0,
@@ -23,7 +29,7 @@ tex_coords = [
 	0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0,
 ]
 
-# Shading values
+# shading values initialization, the shading intensities
 shading = [
 	0.80, 0.80, 0.80, 0.80,
 	0.80, 0.80, 0.80, 0.80,
@@ -33,7 +39,7 @@ shading = [
 	0.92, 0.92, 0.92, 0.92,
 ]
 
-# Index values
+# Index values initializations for in plane orientation
 indices = [
 	 0,  1,  2,  0,  2,  3, # right
 	 4,  5,  6,  4,  6,  7, # left
