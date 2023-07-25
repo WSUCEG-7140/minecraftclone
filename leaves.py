@@ -25,7 +25,7 @@ glass = False
 # It is translucent, True or False
 translucent = False
 
-# It has colliders values to initialize
+# It has colliders values to initialize,  a list of float numbers
 colliders = [
 	[
 		(-0.5, -0.5, -0.5),
@@ -34,7 +34,7 @@ colliders = [
 ]
 
 
-# vertices positions initialization, to make leaves
+# vertices positions initialization,  a list of float numbers, to make leaves
 vertex_positions = [
 	[ 0.5,  0.5,  0.5,  0.5, -0.5,  0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5], # right
 	[-0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,  0.5,  0.5], # left
@@ -44,7 +44,7 @@ vertex_positions = [
 	[ 0.5,  0.5, -0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5], # back
 ]
 
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
@@ -54,7 +54,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of float numbers, the shading intensities
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6],
 	[0.6, 0.6, 0.6, 0.6],
