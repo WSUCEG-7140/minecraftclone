@@ -11,22 +11,22 @@ https://minecraft.fandom.com/wiki/Ladder
 import unittest
 # constant variable initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
 
-# It is not a cube shape
+# It is of a cube shape, True or False
 is_cube = False
 
-# It is not glass
+# It is made of glass, True or False
 glass = False
 
-# It is not tranlucent
+# It is tranlucent, True or False
 translucent = False
 
-# It has no colliders
+# It has no colliders values initialized
 colliders = []
 
 
