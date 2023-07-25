@@ -9,13 +9,13 @@ import unittest
 
 # constant variable initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# it is not cube
+# it is cube, True or False
 is_cube = False
 
-# It is not glass
+# It is glass, True or False
 glass = False
 
 # It has no colliders values
