@@ -16,7 +16,7 @@ transparent = True
 # Degree of transparency 0, 1 and 2
 transparency = 2
 
-# Plant is not translucent
+# Plant is translucent, True or False
 translucent = False
 
 # Plant is not cube
