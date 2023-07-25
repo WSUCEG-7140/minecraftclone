@@ -18,7 +18,7 @@ is_cube = False
 # It is glass, True or False
 glass = False
 
-# It has no colliders values
+# It has no colliders values to initialize
 colliders = []
 
 # List initializations
