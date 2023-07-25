@@ -9,23 +9,24 @@ https://minecraft.fandom.com/wiki/Torch
 # import module to write test cases for the code
 import unittest
 
-# variable initializations
+# Constant variable initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
-# It is not a cube shape
+# It is of a cube shape, True or False
 is_cube = False
-# It is not glass
+
+# It is glass, True or False
 glass = False
-# It is not translucent
+# It is translucent, True or False
 translucent = False
-# It has no colliders
+# It has no colliders to initialize
 colliders = []
 
-# vertices positions initialization, to make the torch flicker
+# vertices positions initialization, a list of float numbers
 vertex_positions = [
 	[ 0.0625,  0.5,  0.5,    0.0625, -0.5,  0.5,    0.0625, -0.5, -0.5,    0.0625,  0.5, -0.5], # right
 	[-0.0625,  0.5, -0.5,   -0.0625, -0.5, -0.5,   -0.0625, -0.5,  0.5,   -0.0625,  0.5,  0.5], # left
@@ -34,7 +35,7 @@ vertex_positions = [
 	[-0.5,  0.5,  0.0625,   -0.5, -0.5,  0.0625,    0.5, -0.5,  0.0625,    0.5,  0.5,  0.0625], # front
 	[ 0.5,  0.5, -0.0625,    0.5, -0.5, -0.0625,   -0.5, -0.5, -0.0625,   -0.5,  0.5, -0.0625], # back
 ]
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization, where textures drawn pixel by pixel, a list of float numbers
 tex_coords = [
 	[0.0, 1.0, 0.0,   0.0, 0.0, 0.0,   1.0, 0.0, 0.0,   1.0, 1.0, 0.0], # right
 	[0.0, 1.0, 0.0,   0.0, 0.0, 0.0,   1.0, 0.0, 0.0,   1.0, 1.0, 0.0], # left
@@ -44,7 +45,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0,   0.0, 0.0, 0.0,   1.0, 0.0, 0.0,   1.0, 1.0, 0.0], # back
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization, the shading intensities, a list of float numbers
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6], # right
 	[0.6, 0.6, 0.6, 0.6], # left
