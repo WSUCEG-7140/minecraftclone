@@ -2,7 +2,7 @@
 <p>Based off of https://github.com/fogleman/Craft : create moving clouds, different procedural terrain generation.
 </p>
 <img src="Screenshot.png"></br>
-Members : WSUCEG7140 Erik M. Buck, bibekrj, Deekshitha-kancharla, cleancoder1016, kruslin2.</br></br>
+Team Members : WSUCEG7140 Erik M. Buck, bibekrj, Deekshitha-kancharla, cleancoder1016, kruslin2.</br></br>
 <h2>Documentation</h2>
 <ul>
   <li>cleancoder1016 - </li>
