@@ -10,22 +10,22 @@ https://minecraft-archive.fandom.com/wiki/Leaves
 import unittest
 # Constant variables initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 1
 
-# It is a cube shape
+# It is of a cube shape, True or False
 is_cube = True
 
-# It is not glass
+# It is glass, True of False
 glass = False
 
-# It is not translucent
+# It is translucent, True or False
 translucent = False
 
-# It has colliders values
+# It has colliders values to initialize
 colliders = [
 	[
 		(-0.5, -0.5, -0.5),
