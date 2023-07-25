@@ -9,7 +9,7 @@ import unittest
 # import The OpenGL interface
 import glm
 
-# 6 x 3 matrix direction in plane orientation initialization
+# 6 x 3 matrix direction in plane orientation initialization, a list of glm.ivec3
 DIRECTIONS = (glm.ivec3(1, 0, 0), 
             glm.ivec3(-1, 0, 0), 
             glm.ivec3(0, 1, 0), 
@@ -17,7 +17,7 @@ DIRECTIONS = (glm.ivec3(1, 0, 0),
             glm.ivec3(0, 0, 1), 
             glm.ivec3(0, 0, -1))
 
-# direction vectors in plane orientation initialization
+# direction vectors in plane orientation initialization, a list of glm.ivec3
 EAST = glm.ivec3(1, 0, 0)
 WEST = glm.ivec3(-1, 0, 0)
 UP = glm.ivec3(0, 1, 0)
