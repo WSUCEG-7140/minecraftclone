@@ -10,22 +10,22 @@ import unittest
 
 # constant variables initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency 0, 1 and 2
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
 
 # Plant is translucent, True or False
 translucent = False
 
-# Plant is not cube
+# It is a cube, True or False
 is_cube = False
 
-# Plant is not glass
+# It is glass, True or False
 glass = False
 
-# It has no colliders values
+# It has no colliders values initialized
 colliders = []
 
 # vertices positions initialization to make plants
