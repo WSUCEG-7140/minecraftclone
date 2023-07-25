@@ -28,17 +28,17 @@ translucent = False
 # It has no colliders values to initialize
 colliders = []
 
-# vertices positions initialization, to make a lever
+# vertices positions initialization,  a list of float numbersto make a lever
 vertex_positions = [
 	[ 0.5,  0.0,  0.5,   0.5, -0.5,  0.5,   0.5, -0.5, -0.5,   0.5,  0.0, -0.5], # right
 	[-0.5,  0.0, -0.5,  -0.5, -0.5, -0.5,  -0.5, -0.5,  0.5,  -0.5,  0.0,  0.5], # left
 	[ 0.5,  0.0,  0.5,   0.5,  0.0, -0.5,  -0.5,  0.0, -0.5,  -0.5,  0.0,  0.5], # top
 	[-0.5, -0.5,  0.5,  -0.5, -0.5, -0.5,   0.5, -0.5, -0.5,   0.5, -0.5,  0.5], # bottom
-	[-0.5,  0.0,  0.5,  -0.5, -0.5,  0.5,   0.5, -0.5,  0.5,   0.5,  0.0,  0.5], # front
+	[-0.5,  0.0,  0.5,  -0.5, -0.5,  , 0.5,   0.5, -0.5,  0.5,   0.5,  0.0,  0.5], # front
 	[ 0.5,  0.0, -0.5,   0.5, -0.5, -0.5,  -0.5, -0.5, -0.5,  -0.5,  0.0, -0.5], # back
 ]
 
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization,  a list of float numbers, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 0.5, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.5, 0.0],
 	[0.0, 0.5, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.5, 0.0],
@@ -48,7 +48,7 @@ tex_coords = [
 	[0.0, 0.5, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.5, 0.0],
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of float numbers, the shading intensities
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6],
 	[0.6, 0.6, 0.6, 0.6],
