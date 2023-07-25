@@ -1,5 +1,5 @@
 <h2>WSUCEG-7140 Class Project - minecraftclone</h2></br>
-<p>Based off of https://github.com/fogleman/Craft : create moving clouds, different procedural terrain generation, generation of mazes,.
+<p>Based off of https://github.com/fogleman/Craft : create moving clouds, different procedural terrain generation.
 </p>
 <img src="Screenshot.png"></br>
 Members : WSUCEG7140 Erik M. Buck, bibekrj, Deekshitha-kancharla, cleancoder1016, kruslin2.</br></br>
