@@ -30,22 +30,22 @@ translucent = False
 colliders = []
 
 
-# vertices positions initialization, to make a ladder
+# vertices positions initialization,  a list of float numbers, to make a ladder
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000, -0.3536,  0.3536, -0.5000, -0.3536, -0.3536, -0.5000,  0.3536, -0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
-# textures coordinates initialization, where textures drawn pixel by pixel
-tex_coords = [
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
+tex_coords = [, 
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of integer, numbers, the shading intensities
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
