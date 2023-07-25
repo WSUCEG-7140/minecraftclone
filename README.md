@@ -25,7 +25,7 @@ S     : Move Backward
 A     : Move Left
 D     : Move Right
 SPACE : Jump
-E     : Inventory (Zombie)
+E     : Zombies release
 F     : Toggle between flying/not Flying.
 Mouse left-click: remove block
 Mouse right-click: create block
