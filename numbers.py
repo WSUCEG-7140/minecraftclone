@@ -9,9 +9,9 @@ import unittest
 
 # constant variables initializations
 
-# vertices positions initialization, to create terrain
+# vertices positions initialization,  a list of float numbers, to create terrain
 vertex_positions = [
-	 0.5,  0.5,  0.5,  0.5, -0.5,  0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5,
+	 0.5,  0.5,  0.5,  0.5, -0.5,,   0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5,
 	-0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,  0.5,  0.5,
 	-0.5,  0.5,  0.5, -0.5,  0.5, -0.5,  0.5,  0.5, -0.5,  0.5,  0.5,  0.5,
 	-0.5, -0.5,  0.5, -0.5, -0.5, -0.5,  0.5, -0.5, -0.5,  0.5, -0.5,  0.5,
@@ -19,7 +19,7 @@ vertex_positions = [
 	 0.5,  0.5, -0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,
 ]
 
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
 tex_coords = [
 	0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0,
 	0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0,
@@ -29,7 +29,7 @@ tex_coords = [
 	0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0,
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of float numbers, the shading intensities
 shading = [
 	0.80, 0.80, 0.80, 0.80,
 	0.80, 0.80, 0.80, 0.80,
@@ -39,7 +39,7 @@ shading = [
 	0.92, 0.92, 0.92, 0.92,
 ]
 
-# Index values initializations for in plane orientation
+# Index values initializations for in plane orientation,  a list of integer numbers
 indices = [
 	 0,  1,  2,  0,  2,  3, # right
 	 4,  5,  6,  4,  6,  7, # left
