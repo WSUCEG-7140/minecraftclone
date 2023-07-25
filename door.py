@@ -9,22 +9,22 @@ import unittest
 
 # variables initialization
 
-# Door is not transparent
+# Door is transparent, True or False
 transparent = False
 
-# Degree of tranparency
+# Degree of tranparency, 0 = not transparent, 1 = a bit trasnparent and 2 = very transparent
 transparency = 0
 
-# Door is cube
+# Door is cube, True or False
 is_cube = True
 
-# Door is not glass
+# Door is made of glass, True or False
 glass = False
 
-# Door is not translucent
+# Door is translucent, True or False
 translucent = False
 
-# It has no colliders values
+# It has no colliders values to initialize
 colliders = []
 
 # vertices positions initialization, to make doors
