@@ -10,22 +10,22 @@
 import unittest
 # Constant variables initializations
 
-# It is tranparent
+# It is tranparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
 
-# It is not a cube
+# It is a cube, True or False
 is_cube = False
 
-# It is not glass
+# It is made of glass, True of False
 glass = False
 
-# It is not translucent
+# It is translucent, True or False
 translucent = False
 
-# It has no colliders values
+# It has no colliders values to initialize
 colliders = []
 
 # vertices positions initialization, to make a lever
