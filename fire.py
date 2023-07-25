@@ -29,7 +29,7 @@ translucent = False
 # It has no colliders values initialized
 colliders = []
 
-# vertices positions initialization, to make fires
+# vertices positions initialization,  a list of float numbers, to make fires
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
@@ -37,7 +37,7 @@ vertex_positions = [
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
 
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
@@ -45,7 +45,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values initialization for the shading intensities
+# shading values initialization for the shading intensities,  a list of integer numbers.
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
