@@ -54,4 +54,68 @@ class TextureManager:
 				gl.GL_RGBA, gl.GL_UNSIGNED_BYTE,
 				texture_image.get_data("RGBA", texture_image.width * 4))
 #testcases
+class TestTextureManager(unittest.TestCase):
+    def setUp(self):
+        # Initialize necessary variables here (e.g., texture_width, texture_height, max_textures)
+        self.texture_width = 64
+        self.texture_height = 64
+        self.max_textures = 10
 
+        # You may also set up a mock logger if needed for testing logging statements
+
+    def test_texture_manager_init(self):
+        # Test TextureManager initialization
+        texture_manager = TextureManager(self.texture_width, self.texture_height, self.max_textures)
+
+        # Assert that the textures list is empty after initialization
+        self.assertEqual(len(texture_manager.textures), 0)
+
+        # Assert that the texture_array is not None
+        self.assertIsNotNone(texture_manager.texture_array)
+
+    def test_generate_mipmaps(self):
+        # Test generating mipmaps
+        texture_manager = TextureManager(self.texture_width, self.texture_height, self.max_textures)
+
+        # Generate mipmaps
+        texture_manager.generate_mipmaps()
+
+        # Perform assertions for the success of mipmaps generation (e.g., check if mipmap option is set)
+
+    def test_add_texture(self):
+        # Test adding a texture
+        texture_manager = TextureManager(self.texture_width, self.texture_height, self.max_textures)
+
+        # Load a sample texture for testing (you may need to prepare the required image for this test)
+        sample_texture = "sample_texture"
+        pyglet.image.get_image_data = lambda: pyglet.image.ImageData(
+            self.texture_width, self.texture_height, 'RGBA', (self.texture_width * 4), b'')
+
+        # Add the sample texture
+        texture_manager.add_texture(sample_texture)
+
+        # Assert that the texture is added to the textures list
+        self.assertIn(sample_texture, texture_manager.textures)
+
+        # Perform assertions for the texture_array after adding the texture (e.g., check if texture is correctly loaded)
+
+    def test_add_existing_texture(self):
+        # Test adding an existing texture
+        texture_manager = TextureManager(self.texture_width, self.texture_height, self.max_textures)
+
+        # Add a sample texture
+        sample_texture = "sample_texture"
+        texture_manager.add_texture(sample_texture)
+
+        # Add the same texture again
+        texture_manager.add_texture(sample_texture)
+
+        # Assert that the texture is not added again to the textures list
+        self.assertEqual(texture_manager.textures.count(sample_texture), 1)
+
+        # Perform assertions for the texture_array after adding the existing texture (e.g., check if it remains unchanged)
+
+    # Add more test cases as needed to cover other scenarios
+
+if __name__ == '__main__':
+    unittest.main()
