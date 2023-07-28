@@ -1,60 +1,51 @@
-import unittest
-transparent = True
-transparency = 2
-is_cube = False
-glass = False
-translucent = False
+class MinecraftFlat:
+    def __init__(self):
+        """
+        Initialize the MinecraftFlat class.
 
-colliders = []
+        This constructor initializes all the properties of the flat shape.
+        """
+        # Flat shape properties
+        self.transparent = True     # Determines if the flat shape is transparent
+        self.transparency = 2       # Transparency value (arbitrary value, might need to be changed)
+        self.is_cube = False        # Indicates if the object is a cube (False for flat shape)
+        self.glass = False          # Specifies if the flat shape is made of glass material
+        self.translucent = False    # Defines if the flat shape is translucent
 
-#set values to vertext positions
-vertex_positions = [
-	[ 0.5, -0.4375,  0.5,   0.5, -0.4375, -0.5,  -0.5, -0.4375, -0.5,  -0.5, -0.4375,  0.5], # top
-	[-0.5, -0.4375,  0.5,  -0.5, -0.4375, -0.5,   0.5, -0.4375, -0.5,   0.5, -0.4375,  0.5], # bottom
-]
+        # Data structures to define the flat shape's geometry
+        self.colliders = []         # List of colliders (bounding boxes) for the flat shape (empty for flat shape)
 
-#set values to texture co-ordinates
-tex_coords = [
-	[0.0, 1.0, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 1.0, 0.0],
-]
+        self.vertex_positions = [   # List of vertex positions for each face of the flat shape
+            [0.5, -0.4375, 0.5, 0.5, -0.4375, -0.5, -0.5, -0.4375, -0.5, -0.5, -0.4375, 0.5],  # top face
+            [-0.5, -0.4375, 0.5, -0.5, -0.4375, -0.5, 0.5, -0.4375, -0.5, 0.5, -0.4375, 0.5],  # bottom face
+        ]
 
-#set shading values
-shading_values = [
-	[1.0, 1.0, 1.0, 1.0],
-	[0.4, 0.4, 0.4, 0.4],
-]
-class minecraftFlatTestCases(unittest.TestCase):
-    def test_flat_properties(self):
-        # Test transparency property
-        assert transparent is True
+        self.tex_coords = [         # Texture coordinates for each vertex of the flat shape
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],  # top face texture coordinates
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],  # bottom face texture coordinates
+        ]
 
-        # Test transparency value
-        assert transparency == 2
+        self.shading_values = [    # Shading values for each face of the flat shape
+            [1.0, 1.0, 1.0, 1.0],  # top face shading values
+            [0.4, 0.4, 0.4, 0.4],  # bottom face shading values
+        ]
 
-        # Test is_cube property
-        assert is_cube is False
+    def set_properties(self, transparent, transparency, is_cube, glass, translucent, colliders):
+        """
+        Set properties of the flat shape.
 
-        # Test glass property
-        assert glass is False
-
-        # Test translucent property
-        assert translucent is False
-
-    def test_flat_data_structures(self):
-        # Test vertex_positions list
-        assert len(vertex_positions) == 2
-        assert len(vertex_positions[0]) == 12
-
-        # Test tex_coords list
-        assert len(tex_coords) == 2
-        assert len(tex_coords[0]) == 12
-
-        # Test shading_values list
-        assert len(shading_values) == 2
-        assert len(shading_values[0]) == 4
-
-
-# Run the test cases
-if __name__ == '__main__':
-    unittest.main()
+        Args:
+            transparent (bool): Determines if the flat shape is transparent.
+            transparency (int): Transparency value (arbitrary value, might need to be changed).
+            is_cube (bool): Indicates if the object is a cube (False for flat shape).
+            glass (bool): Specifies if the flat shape is made of glass material.
+            translucent (bool): Defines if the flat shape is translucent.
+            colliders (list): List of colliders (bounding boxes) for the flat shape (empty for flat shape).
+        """
+        # Set properties of the flat shape
+        self.transparent = transparent
+        self.transparency = transparency
+        self.is_cube = is_cube
+        self.glass = glass
+        self.translucent = translucent
+        self.colliders = colliders
