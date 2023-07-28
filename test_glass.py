@@ -2,11 +2,11 @@
 import unittest
 from glass import MinecraftGlass
 
-class TestMinecraftCow(unittest.TestCase):
+class TestMinecrafGlass(unittest.TestCase):
     def setUp(self):
         self.glass = MinecraftGlass()
 
-    def test_cow_properties(self):
+    def test_glass_properties(self):
         # Test transparency property
         self.assertTrue(self.glass.transparent)
 
@@ -22,7 +22,7 @@ class TestMinecraftCow(unittest.TestCase):
         # Test translucent property
         self.assertFalse(self.glass.translucent)
 
-    def test_cow_data_structures(self):
+    def test_glass_data_structures(self):
         # Test colliders list
         self.assertEqual(len(self.glass.colliders), 1)
         self.assertEqual(len(self.glass.colliders[0]), 2)
@@ -41,7 +41,7 @@ class TestMinecraftCow(unittest.TestCase):
         self.assertEqual(len(self.glass.shading_values), 6)
         self.assertEqual(len(self.glass.shading_values[0]), 4)
 
-# test_code.py ends here
+
 
 if __name__ == '__main__':
     unittest.main()
