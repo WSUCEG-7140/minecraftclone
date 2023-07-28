@@ -1,0 +1,269 @@
+# Sprint Meeting 1
+## 13 June 2023
+
+
+## Attendees/Present:
+WSUCEG7140 Erik M. Buck - online
+kruslin2 - online
+Siva Rama Krishna Prasad Changala - online
+Deekshitha-kancharla - online
+
+
+## Absent:
+NONE
+
+## Discussion 
+Each team member shared their progress on breakout session-webex
+
+Prof. Erik Buck showed us how to create an issue on GitHub.
+
+## Next Meeting Details: 27 June 2023
+
+----------------------------------------------------------------------------------------------------------------
+# Standup Meeting Minutes
+## 15 June 2023
+
+
+## Attendees/Present:
+bibekrj - in class
+kruslin2 - in class
+Siva Rama Krishna Prasad Changala - online
+Deekshitha-kancharla - online
+
+## Absent:
+NONE
+
+## Discussion 
+Each team member shared their progress on breakout session-webex/in class
+
+Mr. Joshi set some priorities
+
+Deekshitha Kancharla:In this meeting we have discussed and completed all setup requirements for the application and got a better understanding of how to create the issues form the previous class discussion.We also created some issues and assigned priority fpr thoes issues depending upon their complexity.
+
+---------------------------------------------------------------------------------------------------------------
+# Standup Meeting Minutes
+
+ Location : Webex Meeting
+ Date: 20 June 2023
+ Time: 12pm
+
+Attendees/Present:
+kruslin2, Siva Rama Krishna Prasad Changala and Deekshitha-kancharla - online
+
+
+Absent:
+NONE
+
+Agenda:
+ Each team member shared their progress:
+Deekshitha Kancharla:In this meeting we created issues relating to our project and assigned them to each teammate based on their priority and started working on assigned issues.I have created issues#24 which impletements detection of collison using hit ray and issue#26 which implements loading chunks for sprint 1 and started working on thoes issues.
+
+kruslin2:Will implement issue#15
+
+cleancoder1016(Siva Rama Krishna Prasad Changala U01077803):The agenda for my sprint 1 includes introducing the project, and reviewing the timeline. discussing the button design and functionality, providing updates on the cactus object and 3D cow model development, defining the creeper character's attributes and role, and reviewing the crop's properties in the 3D environment while addressing client feedback.
+
+
+Additional Notes:
+Team will pick tasks as per priority assigned.
+
+Next Meeting Details:
+Next meeting will be on 27 June 2023 on Webex
+
+Minutes submitted by: kruslin2
+----------------------------------------------------------------------------------------------------------------------
+# Standup Meeting Minutes
+
+ Location : Webex Meeting
+ Date: 27 June 2023
+ Time: 12pm
+
+Attendees/Present:
+kruslin2, Siva Rama Krishna Prasad Changala and Deekshitha-kancharla - online
+
+
+Absent:
+NONE
+
+Agenda:
+ Each team member shared their progress:
+
+cleancoder1016(Siva Rama Krishna Prasad Changala U01077803): we have successfully addressed all the requirements, including introducing the project, reviewing the timeline, discussing the button design and functionality, providing updates on the cactus object and 3D cow model development, defining the creeper character's attributes and role, and reviewing the crop's properties in the 3D environment while addressing all your valuable feedback.
+
+Deekshitha Kancharla: I have completed issue#24,in such a way that it can handle positive and negative components of the ray vector correctly and completed issue#26 and stated working on issue#34 API such that have the ability to update its position, select a target, and handle movement and rotation based on its target position.
+
+kruslin2 : has coded and tested some utility fuction modules and ready to make some pull request reviews.
+
+Additional Notes:
+Team will pick tasks as per priority assigned.
+
+Next Meeting Details:
+Next meeting will be on 04 July 2023 on Webex
+
+Minutes submitted by: kruslin2
+----------------------------------------------------------------------------------------------------------------------
+# Sprint Meeting 2
+## 27 June 2023
+
+
+## Attendees/Present:
+WSUCEG7140 Erik M. Buck - online
+kruslin2 - online
+Siva Rama Krishna Prasad Changala - online
+Deekshitha-kancharla - online
+
+## Absent:
+NONE
+
+## Discussion 
+Each team member shared their progress on breakout session-webex
+
+We and Prof. Erik Buck had problem with unable to merge from an issue branch to master branch due to different history of branches. 
+Deekshitha Kancharla: In this meeting, we discussed getting feedback from teammates and giving them feedback, and how to create pull requests for issues.A sprint-one part of the issues was completed, and a sprint-two part of the issues has been created.
+
+## Next Meeting Details: 11 July 2023
+---------------------------------------------------------------------------------------------------------------------
+# Standup Meeting Minutes
+
+ Location : Webex Meeting
+ Date: 04 July 2023
+ Time: 12pm
+
+Attendees/Present:
+kruslin2, Siva Rama Krishna Prasad Changala and Deekshitha-kancharla - online
+
+
+Absent:
+NONE
+
+Agenda:
+ Each team member shared their progress:
+
+cleancoder1016(Siva Rama Krishna Prasad Changala, U01077803): In this sprint meeting, we will discuss the creation of a cube mesh, the implementation of a flat surface in the game world, and the development of a glass block for the game.
+
+Deekshitha Kancharla: I have started working on issue#36 which is about creating API for handling the player's movement, input processing,camera management and wrote the test cases. 
+I also have started working on issue #32 and created API which handles loading, managing, and generating mipmaps for textures in a texture array.
+
+kruslin2: will continue create and implement users issues 21, 48, and 50.
+
+
+Additional Notes:
+Team will pick tasks as per priority assigned.
+
+Next Meeting Details:
+Next meeting will be on 11 July 2023 on Webex
+
+Minutes submitted by: kruslin2
+------------------------------------------------------------------------------------------------------------------
+# Standup Meeting Minutes
+
+ Location : Webex Meeting
+ Date: 11 July 2023
+ Time: 12pm
+
+Attendees/Present:
+kruslin2, Siva Rama Krishna Prasad Changala and Deekshitha-kancharla - online
+
+
+Absent:
+NONE
+
+Agenda:
+ Each team member shared their progress:
+
+cleancoder1016(Siva Rama Krishna Prasad Changala, U01077803): In this meeting, I am delighted to announce that we have successfully coded all the required elements, including the cube mesh, the flat surface in the game world, and the glass block, meeting all the specifications and working in issues related to sprint 3.
+
+Deekshitha Kancharla:I have complete issue#32 and started working on issue#81 API which can find uniform locations, set uniform values.
+
+kruslin2: will continue create and implement users issues 64, 65, and 66.
+
+
+Additional Notes:
+Team will pick tasks as per priority assigned.
+
+Next Meeting Details:
+Next meeting will be on 15 July 2023 on Webex
+
+Minutes submitted by: kruslin2
+-------------------------------------------------------------------------------------------------------------------------
+# Sprint Meeting 3
+## 11 July 2023
+
+
+## Attendees/Present:
+WSUCEG7140 Erik M. Buck - online
+kruslin2 - online
+Siva Rama Krishna Prasad Changala - online
+Deekshitha-kancharla - online
+
+## Absent:
+NONE
+
+## Discussion 
+Each team member shared their progress on breakout session-webex
+
+Prof. Erik Buck noted excellent progress but documentation is missing
+Deekshitha Kancharla: In this meeting we have discussed regarding the documnetation of project and started working on issues#85 which can create the 3D model for a Minecraft character & also working on issue#86
+
+
+## Minutes submitted by: kruslin2
+-----------------------------------------------------------------------------------------------------------------------------
+# Standup Meeting Minutes
+
+ Location : Webex Meeting
+ Date: 15 July 2023
+ Time: 12pm
+
+Attendees/Present:
+kruslin2, Siva Rama Krishna Prasad Changala and Deekshitha-kancharla - online
+
+
+Absent:
+NONE
+
+Agenda:
+ Each team member shared their progress:
+
+cleancoder1016(Siva Rama Krishna Prasad Changala, U01077803):In this sprint meeting, we addressed the following issues: Implementing the filling behavior for blocks with a block above them, creating a transparent sign block with customizable transparency, developing a customizable skeleton character with properties like transparency, cube or glass appearance, defining properties for the soil block to customize its behavior and appearance, and creating a zombie character model for Minecraft; also, we discussed on necessary documentation updates.
+
+Deekshitha Kancharla: I have completed issue#86 and created new issue#89 which implements "slab" feature to create transparent and customizable blocks.I also have started working on issue#91 which can implement the functionality for stairs blocks to use them in building structures.
+
+kruslin2: will continue create and implement users issues 67, 98, 110 and 111.
+
+
+Additional Notes:
+Team will pick tasks as per priority assigned.
+
+Next Meeting Details:
+Next meeting will be on 20 July 2023 on Webex
+
+Minutes submitted by: kruslin2
+-----------------------------------------------------------------------------------------------------------------------------------
+# Standup Meeting Minutes
+
+ Location : Webex Meeting
+ Date: 20 July 2023
+ Time: 12pm
+
+Attendees/Present:
+kruslin2, Siva Rama Krishna Prasad Changala and Deekshitha-kancharla - online
+
+
+Absent:
+NONE
+
+Agenda:
+ Each team member shared their progress:
+
+cleancoder1016(Siva Rama Krishna Prasad Changala, U01077803): The project has reached successful completion with all sprint objectives met, including implementing various customizable blocks and characters, along with comprehensive documentation
+
+Deekshitha Kancharla:In this meeting we discussed the status of our project and progress of each teammate. we also discussed about the documnetation and final exam of the course
+
+kruslin2: will continue implement users issues 110 other main modules for the minecraft program code,  and 111, a main module for handling joystick.
+
+Additional Notes:
+Team will pick tasks as per priority assigned.
+
+
+
+Minutes submitted by: kruslin2
+---------------------------------------------------------------------------------------------------------------------------------------

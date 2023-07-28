@@ -1,74 +1,48 @@
-import unittest
-# in the end, it'd be nice to have it so that liquids fill up the whole block when they have a block above them
-# this would avoid the problems this solution has
-transparent = True
-transparency = 1
-is_cube = True
-glass = True
-translucent = True
+class MinecraftLiquid:
+    def __init__(self):
+        """
+        Initialize the MinecraftLiquid class.
 
-colliders = []
+        This constructor initializes all the properties of the liquid block.
+        """
+        # Liquid block properties
+        self.transparent = True     # Determines if the liquid block is transparent
+        self.transparency = 1       # Transparency value (arbitrary value, might need to be changed)
+        self.is_cube = True         # Indicates if the object is a cube (True for liquid block)
+        self.glass = True           # Specifies if the block has a glass-like appearance
+        self.translucent = True     # Defines if the liquid block is translucent
 
-#set vertext positions 
-vertex_positions = [
-	[ 0.500,  0.375,  0.500,   0.500, -0.625,  0.500,   0.500, -0.625, -0.500,   0.500,  0.375, -0.500], # right
-	[-0.500,  0.375, -0.500,  -0.500, -0.625, -0.500,  -0.500, -0.625,  0.500,  -0.500,  0.375,  0.500], # left
-	[ 0.500,  0.375,  0.500,   0.500,  0.375, -0.500,  -0.500,  0.375, -0.500,  -0.500,  0.375,  0.500], # top
-	[-0.500, -0.625,  0.500,  -0.500, -0.625, -0.500,   0.500, -0.625, -0.500,   0.500, -0.625,  0.500], # bottom
-	[-0.500,  0.375,  0.500,  -0.500, -0.625,  0.500,   0.500, -0.625,  0.500,   0.500,  0.375,  0.500], # front
-	[ 0.500,  0.375, -0.500,   0.500, -0.625, -0.500,  -0.500, -0.625, -0.500,  -0.500,  0.375, -0.500], # back
-]
+        # Define the colliders (bounding boxes) for the liquid block
+        self.colliders = []
 
-#set texture co-ordinates
-tex_coords = [
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
-]
+        # Define the vertex positions for each face of the liquid block
+        self.vertex_positions = [
+            [0.500,  0.375,  0.500,   0.500, -0.625,  0.500,   0.500, -0.625, -0.500,   0.500,  0.375, -0.500],   # right face
+            [-0.500,  0.375, -0.500,  -0.500, -0.625, -0.500,  -0.500, -0.625,  0.500,  -0.500,  0.375,  0.500],   # left face
+            [0.500,  0.375,  0.500,   0.500,  0.375, -0.500,  -0.500,  0.375, -0.500,  -0.500,  0.375,  0.500],   # top face
+            [-0.500, -0.625,  0.500,  -0.500, -0.625, -0.500,   0.500, -0.625, -0.500,   0.500, -0.625,  0.500],   # bottom face
+            [-0.500,  0.375,  0.500,  -0.500, -0.625,  0.500,   0.500, -0.625,  0.500,   0.500,  0.375,  0.500],   # front face
+            [0.500,  0.375, -0.500,   0.500, -0.625, -0.500,  -0.500, -0.625, -0.500,  -0.500,  0.375, -0.500],   # back face
+        ]
 
-#set shading values
-shading_values = [
-	[0.6, 0.6, 0.6, 0.6],
-	[0.6, 0.6, 0.6, 0.6],
-	[1.0, 1.0, 1.0, 1.0],
-	[0.4, 0.4, 0.4, 0.4],
-	[0.8, 0.8, 0.8, 0.8],
-	[0.8, 0.8, 0.8, 0.8],
-]
-class minecraftLiquidTestCases(unittest.TestCase):
-    def test_liquid_properties(self):
-        # Test transparency property
-        assert transparent is True
-
-        # Test transparency value
-        assert transparency == 1
-
-        # Test is_cube property
-        assert is_cube is True
-
-        # Test glass property
-        assert glass is True
-
-        # Test translucent property
-        assert translucent is True
-
-    def test_liquid_data_structures(self):
-        # Test vertex_positions list
-        assert len(vertex_positions) == 6
-        assert len(vertex_positions[0]) == 12
-
-        # Test tex_coords list
-        assert len(tex_coords) == 6
-        assert len(tex_coords[0]) == 12
-
-        # Test shading_values list
-        assert len(shading_values) == 6
-        assert len(shading_values[0]) == 4
+        # Define the texture coordinates for each vertex of the liquid block
+        self.tex_coords = [
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],   # right face texture coordinates
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],   # left face texture coordinates
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],   # top face texture coordinates
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],   # bottom face texture coordinates
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],   # front face texture coordinates
+            [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],   # back face texture coordinates
+        ]
+		# set shading values
+        self.shading_values = [
+		[0.6, 0.6, 0.6, 0.6],
+		[0.6, 0.6, 0.6, 0.6],
+		[1.0, 1.0, 1.0, 1.0],
+		[0.4, 0.4, 0.4, 0.4],
+		[0.8, 0.8, 0.8, 0.8],
+		[0.8, 0.8, 0.8, 0.8],
+	]
 
 
-# Run the test cases
-if __name__ == '__main__':
-    unittest.main()
+
