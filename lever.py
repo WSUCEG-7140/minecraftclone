@@ -1,41 +1,44 @@
-# This module implements issue#66 assigned to kruslin2 and passed automated unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#66.
-# It declares all geometric variables needed to create levers in 3D terrain.
-"""https://minecraft.fandom.com/wiki/Lever
 """
+  | This module implements issue#66 assigned to kruslin2 and passed automated unittest with 100% coverage
+  | The coverage report in pdf format is attached to the GitHub link pull request associated with issue#66.
+  | It declares all geometric variables needed to create levers in 3D block models for terrain.
+
+   https://minecraft.fandom.com/wiki/Lever
+"""
+
 # import module to write testcases for the code
 import unittest
 # Constant variables initializations
 
-# It is tranparent
+# It is tranparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
 
-# It is not a cube
+# It is a cube, True or False
 is_cube = False
 
-# It is not glass
+# It is made of glass, True of False
 glass = False
 
-# It is not translucent
+# It is translucent, True or False
 translucent = False
 
-# It has no colliders values
+# It has no colliders values to initialize
 colliders = []
 
-# vertices positions initialization, to make a lever
+# vertices positions initialization,  a list of float numbersto make a lever
 vertex_positions = [
 	[ 0.5,  0.0,  0.5,   0.5, -0.5,  0.5,   0.5, -0.5, -0.5,   0.5,  0.0, -0.5], # right
 	[-0.5,  0.0, -0.5,  -0.5, -0.5, -0.5,  -0.5, -0.5,  0.5,  -0.5,  0.0,  0.5], # left
 	[ 0.5,  0.0,  0.5,   0.5,  0.0, -0.5,  -0.5,  0.0, -0.5,  -0.5,  0.0,  0.5], # top
 	[-0.5, -0.5,  0.5,  -0.5, -0.5, -0.5,   0.5, -0.5, -0.5,   0.5, -0.5,  0.5], # bottom
-	[-0.5,  0.0,  0.5,  -0.5, -0.5,  0.5,   0.5, -0.5,  0.5,   0.5,  0.0,  0.5], # front
+	[-0.5,  0.0,  0.5,  -0.5, -0.5,  , 0.5,   0.5, -0.5,  0.5,   0.5,  0.0,  0.5], # front
 	[ 0.5,  0.0, -0.5,   0.5, -0.5, -0.5,  -0.5, -0.5, -0.5,  -0.5,  0.0, -0.5], # back
 ]
 
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization,  a list of float numbers, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 0.5, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.5, 0.0],
 	[0.0, 0.5, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.5, 0.0],
@@ -45,7 +48,7 @@ tex_coords = [
 	[0.0, 0.5, 0.0,  0.0, 0.0, 0.0,  1.0, 0.0, 0.0,  1.0, 0.5, 0.0],
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of float numbers, the shading intensities
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6],
 	[0.6, 0.6, 0.6, 0.6],

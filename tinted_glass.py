@@ -1,28 +1,32 @@
-# This module implements issue#67 assigned to kruslin2 and passed automated unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#67. 
-# It declares all geometric variables needed to create tinted glasses in 3D terrain.
+"""
+| This module implements issue#67 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#67. 
+| It declares all geometric variables needed to create tinted glasses in 3D block models for terrain.
+
+https://minecraft.fandom.com/wiki/Tinted_Glass
+"""
 
 # import module to write testcases for the code
 import unittest
 
 # constant variables initializations
 
-# the variable indicates tinted_glass is always transparent
+# It is transparent, True or False
 transparent = True
 
-# The value 1 for being transparent or otherwise 0
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 1
 
-# tinted_glass has a cube shape
+# It is of a cube shape, True or False
 is_cube = True
 
-# tinted_glass is glass
+# It is glass, True or False
 glass = True
 
-# tinted_glass is translucent
+# It is translucent, True or False
 translucent = True
 
-# the point coordinates to collide
+# the point coordinates to collide, initialized with a list of float numbers
 colliders = [
 	[
 		(-0.5, -0.5, -0.5),
@@ -30,7 +34,7 @@ colliders = [
 	]
 ]
 
-# relative vertices positions of tinted_glass for each pixel
+# relative vertices positions of tinted_glass for each pixel, initialized with a list of float numbers
 vertex_positions = [
 	[ 0.5,  0.5,  0.5,  0.5, -0.5,  0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5], # right
 	[-0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,  0.5,  0.5], # left
@@ -39,7 +43,7 @@ vertex_positions = [
 	[-0.5,  0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5,  0.5,  0.5,  0.5,  0.5], # front
 	[ 0.5,  0.5, -0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5], # back
 ]
-# relative textures coordinates for each pixel
+# relative textures coordinates for each pixel, initialized with a list of float numbers
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0], # right
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0], # left
@@ -48,7 +52,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0], # front
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0], # back
 ]
-# shading values for tinted_glass
+# shading values for tinted_glass, initialized with a list of float numbers
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6], # right
 	[0.6, 0.6, 0.6, 0.6], # left

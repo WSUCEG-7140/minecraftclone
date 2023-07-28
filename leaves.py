@@ -10,22 +10,22 @@ https://minecraft-archive.fandom.com/wiki/Leaves
 import unittest
 # Constant variables initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 1
 
-# It is a cube shape
+# It is of a cube shape, True or False
 is_cube = True
 
-# It is not glass
+# It is glass, True of False
 glass = False
 
-# It is not translucent
+# It is translucent, True or False
 translucent = False
 
-# It has colliders values
+# It has colliders values to initialize,  a list of float numbers
 colliders = [
 	[
 		(-0.5, -0.5, -0.5),
@@ -34,7 +34,7 @@ colliders = [
 ]
 
 
-# vertices positions initialization, to make leaves
+# vertices positions initialization,  a list of float numbers, to make leaves
 vertex_positions = [
 	[ 0.5,  0.5,  0.5,  0.5, -0.5,  0.5,  0.5, -0.5, -0.5,  0.5,  0.5, -0.5], # right
 	[-0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5,  0.5,  0.5], # left
@@ -44,7 +44,7 @@ vertex_positions = [
 	[ 0.5,  0.5, -0.5,  0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,  0.5, -0.5], # back
 ]
 
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
@@ -54,7 +54,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of float numbers, the shading intensities
 shading_values = [
 	[0.6, 0.6, 0.6, 0.6],
 	[0.6, 0.6, 0.6, 0.6],
