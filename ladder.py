@@ -1,47 +1,51 @@
-# This module implements issue#50 assigned to kruslin2 and passed unittest with 100% coverage
-# The coverage report in pdf format is attached to the GitHub link pull request associated with issue#50.
-# It declares all geometric variables needed to create ladders in 3D terrain.
+"""
+| This module implements issue#50 assigned to kruslin2 and passed automated unittest with 100% coverage
+| The coverage report in pdf format is attached to the GitHub link pull request associated with issue#50.
+| It declares all geometric variables needed to create ladders in 3D block models for terrain.
+
+https://minecraft.fandom.com/wiki/Ladder
+"""
 
 
 # import module to write testcases for the code
 import unittest
-# variable initializations
+# constant variable initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
 
-# It is not a cube shape
+# It is of a cube shape, True or False
 is_cube = False
 
-# It is not glass
+# It is made of glass, True or False
 glass = False
 
-# It is not tranlucent
+# It is tranlucent, True or False
 translucent = False
 
-# It has no colliders
+# It has no colliders values initialized
 colliders = []
 
 
-# vertices positions initialization, to make a ladder
+# vertices positions initialization,  a list of float numbers, to make a ladder
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000, -0.3536,  0.3536, -0.5000, -0.3536, -0.3536, -0.5000,  0.3536, -0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
-# textures coordinates initialization, where textures drawn pixel by pixel
-tex_coords = [
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
+tex_coords = [, 
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of integer, numbers, the shading intensities
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
