@@ -11,41 +11,41 @@ https://minecraft.fandom.com/wiki/Ladder
 import unittest
 # constant variable initializations
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
 
-# It is not a cube shape
+# It is of a cube shape, True or False
 is_cube = False
 
-# It is not glass
+# It is made of glass, True or False
 glass = False
 
-# It is not tranlucent
+# It is tranlucent, True or False
 translucent = False
 
-# It has no colliders
+# It has no colliders values initialized
 colliders = []
 
 
-# vertices positions initialization, to make a ladder
+# vertices positions initialization,  a list of float numbers, to make a ladder
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000, -0.3536,  0.3536, -0.5000, -0.3536, -0.3536, -0.5000,  0.3536, -0.3536, 0.5000,  0.3536],
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
-# textures coordinates initialization, where textures drawn pixel by pixel
-tex_coords = [
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
+tex_coords = [, 
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values initialization, the shading intensities
+# shading values initialization,  a list of integer, numbers, the shading intensities
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],

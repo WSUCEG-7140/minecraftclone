@@ -11,25 +11,25 @@ import unittest
 
 # constant variables initialization
 
-# It is transparent
+# It is transparent, True or False
 transparent = True
 
-# Degree of transparency
+# Degree of transparency, 0 = not transparent, 1 = a bit transparent and 2 = very transparent
 transparency = 2
 
-# It is not cube
+# It is cube, True or False
 is_cube = False
 
-# It is not glass
+# It is made of glass, True or False
 glass = False
 
-# It is not translucent
+# It is translucent, True or False
 translucent = False
 
-# It has no colliders values
+# It has no colliders values initialized
 colliders = []
 
-# vertices positions initialization, to make fires
+# vertices positions initialization,  a list of float numbers, to make fires
 vertex_positions = [
 	[-0.3536, 0.5000,  0.3536, -0.3536, -0.5000,  0.3536,  0.3536, -0.5000, -0.3536,  0.3536, 0.5000, -0.3536],
 	[-0.3536, 0.5000, -0.3536, -0.3536, -0.5000, -0.3536,  0.3536, -0.5000,  0.3536,  0.3536, 0.5000,  0.3536],
@@ -37,7 +37,7 @@ vertex_positions = [
 	[ 0.3536, 0.5000,  0.3536,  0.3536, -0.5000,  0.3536, -0.3536, -0.5000, -0.3536, -0.3536, 0.5000, -0.3536],
 ]
 
-# textures coordinates initialization, where textures drawn pixel by pixel
+# textures coordinates initialization,  a list of integer numbers, where textures drawn pixel by pixel
 tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
@@ -45,7 +45,7 @@ tex_coords = [
 	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0],
 ]
 
-# shading values initialization for the shading intensities
+# shading values initialization for the shading intensities,  a list of integer numbers.
 shading_values = [
 	[1.0, 1.0, 1.0, 1.0],
 	[1.0, 1.0, 1.0, 1.0],
