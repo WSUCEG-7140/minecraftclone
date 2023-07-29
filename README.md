@@ -56,7 +56,6 @@ Additionally, the project includes the following files:
 - `meeting_minutes.txt`: Minutes of project meetings (if applicable).
 - `README.md`: This file providing an overview of the project.
 - `Screenshot.png`: A screenshot showcasing the project.
-- `g`: (Unknown file purpose - please provide additional information).
 
 ## Installation
 
