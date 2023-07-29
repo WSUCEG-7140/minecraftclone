@@ -80,6 +80,9 @@ Contributions to this project are welcome. If you'd like to add new features, fi
 
 Team Members : WSUCEG7140 Erik M. Buck, bibekrj, Deekshitha-kancharla, cleancoder1016, kruslin2.</br></br>
 <h2>Documentation :</h2><a href="https://kentruslin.github.io/CEG7140/">docs</a>
+##Coverage Report 
+![image](https://github.com/WSUCEG-7140/minecraftclone/assets/123384127/154c100b-0d3a-4a62-8d17-ad8252fd0fa6)
+
 
 
 
