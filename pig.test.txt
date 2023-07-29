@@ -1,0 +1,47 @@
+ Test cases
+def test_minecraft_class():
+    mc = Minecraft()
+
+    # Test transparent
+    assert mc.transparent is True
+
+    # Test is_cube
+    assert mc.is_cube is False
+
+    # Test glass
+    assert mc.glass is False
+
+    # Test add_bone
+    bone_data = {
+        'name': 'test_bone',
+        'pivot': [0.1, 0.2, 0.3],
+        'vertices': [[0.1, 0.2, 0.3, 0.4, 0.5, 0.6]],
+        'tex_coords': [[0.1, 0.2, 0.3, 0.4]],
+        'shading_values': [[0.1, 0.2, 0.3, 0.4]],
+    }
+    mc.add_bone(bone_data)
+    assert len(mc.bones) == 3  # Assuming there were already two bones in the original data
+
+    # Test remove_bone
+    mc.remove_bone('test_bone')
+    assert len(mc.bones) == 2
+
+    # Test set_glass
+    mc.set_glass(True)
+    assert mc.glass is True
+
+    # Test add_collider
+    collider_data = {
+        'name': 'test_collider',
+        'type': 'box',
+        'position': [1.0, 2.0, 3.0],
+        'size': [2.0, 2.0, 2.0],
+    }
+    mc.add_collider(collider_data)
+    assert len(mc.colliders) == 1
+
+    print("All test cases passed!")
+
+
+if __name__ == "__main__":
+    test_minecraft_class()
